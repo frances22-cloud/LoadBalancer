@@ -1,3 +1,35 @@
+## Coding Environment
+
+- Programming Language: python
+- Operationg System: Ubuntu 24.04 LTS or above
+- Docker: Version 20.10.23 or above
+
+
+## Running the Application
+
+1. **Build Docker Image**:
+
+   ```
+   docker-compose build 
+   ```
+
+   This command builds a Docker image named `docker_image` based on the instructions in the Dockerfile.
+
+2. **Start the services**:
+
+   ```
+   docker-compose up -d
+   ```
+   This command starts all the services that required.
+
+3. **Stop the services**:
+   ```
+   docker-compose down
+   ```
+   This command will stop all the running services.
+
+---
+
 ## Performance Evaluation and Observations
 
 ### Task Description (A-1):
