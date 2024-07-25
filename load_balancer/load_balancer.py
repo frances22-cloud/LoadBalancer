@@ -23,7 +23,7 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 
 # ... (existing code) ...
 # Retrieve the server instances created by Docker Compose
-network_name = os.environ.get("COMPOSE_PROJECT_NAME", "ds-assignment_implementing-a-load-balancer") + "_app_network"
+network_name = os.environ.get("COMPOSE_PROJECT_NAME", "loadbalancer") + "_app_network"
 logging.info(f'Retrieving server instances from network: {network_name}')
 server_containers = docker_client.containers.list(filters={'network': network_name})
 logging.info(f'Found {len(server_containers)} instances: {[container.name for container in server_containers]}')
@@ -207,7 +207,7 @@ async def remove_replicas(payload: dict):
 
 
 
-# ...
+
 
 @app.get("/{path:path}")
 async def route_request(path: str):
